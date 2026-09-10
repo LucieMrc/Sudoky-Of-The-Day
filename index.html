@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku du Jour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="page-title">Sudoku du...</h1>
+    
+    <div class="difficulty-selector">
+        <button id="btn-facile" onclick="chargerJeu('facile')">Facile</button>
+        <button id="btn-moyen" onclick="chargerJeu('moyen')">Moyen</button>
+        <button id="btn-difficile" onclick="chargerJeu('difficile')">Difficile</button>
+    </div>
+
+    <div class="info-panel">
+        <span id="theme-name">Thème du jour</span>
+        <span id="timer">00:00</span>
+    </div>
+
+    <div class="sudoku-board" id="board"></div>
+
+    <!-- Pavé numérique pour mobile et bureau -->
+    <div class="numpad">
+        <button onclick="saisirChiffre(1)">1</button>
+        <button onclick="saisirChiffre(2)">2</button>
+        <button onclick="saisirChiffre(3)">3</button>
+        <button onclick="saisirChiffre(4)">4</button>
+        <button onclick="saisirChiffre(5)">5</button>
+        <button onclick="saisirChiffre(6)">6</button>
+        <button onclick="saisirChiffre(7)">7</button>
+        <button onclick="saisirChiffre(8)">8</button>
+        <button onclick="saisirChiffre(9)">9</button>
+        <button onclick="effacerCase()" class="btn-erase" title="Effacer la case">⌫</button>
+    </div>
+
+    <div class="controls">
+        <button onclick="clearAll()">Tout effacer</button>
+    </div>
+
+    <div id="victory-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
